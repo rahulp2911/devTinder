@@ -17,3 +17,15 @@
 
 
 // initialize git repozetory     like "git init"   <--- 
+//create gitignore file     like .gitignore    and add entry node_modules folder and push 
+
+
+
+
+
+//question 
+//what is package.loack json ?   should put on git repo ? 
+
+
+//learn 
+//order of the routes matter a lot 
