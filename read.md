@@ -22,6 +22,20 @@
 //add dummy middleware auth for admin , users 
 
 
+//create config folder in src for databases
+//create free clutor on mongodb ( mongo atlas)
+//install mongoos --> "npm i mongoose"
+//connection your application to database using connectionURL 
+
+
+//create user schema & user model 
+// initilize database
+
+
+
+
+
+
 
 //question 
 //what is package.loack json ?   should put on git repo ? 

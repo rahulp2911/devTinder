@@ -14,10 +14,10 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "node-dev --notify=false src/app.js"
-   
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongoose": "^9.4.1"
   },
   "devDependencies": {
     "node-dev": "^8.0.0"
