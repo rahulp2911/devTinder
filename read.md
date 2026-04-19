@@ -19,7 +19,7 @@
 // initialize git repozetory     like "git init"   <--- 
 //create gitignore file     like .gitignore    and add entry node_modules folder and push 
 
-
+//add dummy middleware auth for admin , users 
 
 
 
@@ -29,3 +29,8 @@
 
 //learn 
 //order of the routes matter a lot 
+
+//route  --> // "/user?s"  // "/use*rs"
+<!-- app.get("/users", (req, res) => {
+    res.send({"fname":"Rahul","lname":"Patil"});
+}); -->

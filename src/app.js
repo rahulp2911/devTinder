@@ -1,20 +1,23 @@
 const express = require("express")
 const app = express();
 
-// app.use("/users", (req, res) => { // this will match all the "all htttp methos" to api 
-//     res.send("okkkk");
-// });
 
-app.get("/users", (req, res) => {
-    res.send({"fname":"Rahul","lname":"Patil"});
+const { adminAuth, userAuth } = require("./middlewares/auth");
+
+
+app.use("/admin", adminAuth);
+
+
+app.post("/user/login", (req, res) => {
+    res.send("Users lOgin Succssfully login");
 });
 
-app.post("/users", (req, res) => {
-    res.send("added some data");
+app.get("/user/data", userAuth, (req, res) => {
+    res.send("user data sent");
 });
 
-app.delete("/users", (req, res) => {
-    res.send("deleted data");
+app.get("/admin/getallData", (req, res) => {
+    res.send("All Data send");
 });
 
 
@@ -23,4 +26,3 @@ app.delete("/users", (req, res) => {
 app.listen(7777, () => {
     console.log("server is listening on port 7777...o");
 });
- 
