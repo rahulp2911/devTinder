@@ -33,6 +33,7 @@
 - question 
 - what is package.loack json ?   should put on git repo ? 
 - what is JSOn and javascript object ?
+- user.findOne with duplicate email ids,whic object return ? 
 
 
 - learn 
