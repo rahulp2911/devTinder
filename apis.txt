@@ -1,0 +1,30 @@
+
+
+1) post --> localhost:7777/signup
+    
+    request body : 
+         {
+        "firstName": "MS",
+        "lastName": "Dhoni",
+        "emailId": "thalaforreason@777.com",
+        "password": "777@123Abcs"
+  }
+
+=====================================================
+
+  2)  Post --> localhost:7777/login
+    
+    request body:
+      {
+       "emailId": "thalaforreason@777.com",
+       "password": "777@123Abcs"
+      }
+
+=========================================================
+
+3) Get --> localhost:7777/profile
+
+ request cookies : 
+     token : "sdfsfsfsfaa"
+
+=========================================================     

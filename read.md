@@ -25,6 +25,13 @@
 
 - data pass to dyanmaic from api body 
 
+- # validate request data , Encrpting Password 
+- install "npm i validator" --> for req validation 
+- install "npm i bcryptjs" ==> for make a "password encrypt" and store in db 
+
+- # Cookies , JWT Token 
+- install "npm i cookie-parser"
+- install "npm i jsonwebtoken"
 
 
 
@@ -34,6 +41,7 @@
 - what is package.loack json ?   should put on git repo ? 
 - what is JSOn and javascript object ?
 - user.findOne with duplicate email ids,whic object return ? 
+- patch and put ?
 
 
 - learn 
