@@ -19,12 +19,31 @@
        "emailId": "thalaforreason@777.com",
        "password": "777@123Abcs"
       }
+========================================================
+
+3) post --> localhost:7777/logout
+
+  request cookies : 
+     token : "sdfsfsfsfaa"
+
+
 
 =========================================================
 
-3) Get --> localhost:7777/profile
+4) Get --> localhost:7777/profile/view
 
- request cookies : 
+  request cookies : 
      token : "sdfsfsfsfaa"
 
 =========================================================     
+
+5) patch --> localhost:7777/profile/edit
+
+  request body:
+      {
+        "age": 29,
+        "gender": "male",
+        "skills":["js","react"]
+      }
+
+

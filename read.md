@@ -35,6 +35,10 @@
 
 - Routes 
 
+- Schema update
+- logout api
+- profile edit api
+
 
 
 - question 

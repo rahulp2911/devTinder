@@ -11,6 +11,16 @@ const validateSignUpData = (req) => {
         throw new Error("Password is not Valid");
     }
 }
+
+const validateEditProfileData = (req) => {
+    const allowEditFields = ["firstName", "lastName", "emailId", "age", "gender", "photoUrl", "about", "skills"];
+    const isEditAllow = Object.keys(req.body).every((field) => allowEditFields.includes(field));
+    return isEditAllow;
+}
+
+
+
 module.exports = {
-    validateSignUpData
+    validateSignUpData,
+    validateEditProfileData
 }

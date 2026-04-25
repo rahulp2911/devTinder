@@ -8,7 +8,7 @@ authRouter
 profileRouter
 - get / profile / view
 - patch / profile / edit
-- patch / profile / password
+- patch / profile / password    // forgot password api
 
 connectionRequestRouter
 - post / request / send / interested / :userId
