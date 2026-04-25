@@ -6,6 +6,7 @@ const { validateSignUpData } = require("./utils/validation")
 const cookieParser = require('cookie-parser')
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcryptjs")
+const { userAuth } = require("./middlewares/auth")
 
 
 app.use(express.json());
@@ -54,10 +55,10 @@ app.post("/login", async (req, res) => {
 
         if (isPassworsValid) {
             //Create a JWT Token
-            const token = await jwt.sign({ _id: userData._id }, "RAHUL@123") //hide some data in token --> _id: user._id , also add secreat key
+            const token = await jwt.sign({ _id: userData._id }, "RAHUL@123", { expiresIn: "1d" }) //hide some data in token --> _id: user._id , also add secreat key
 
             //add token to the cookie and send the response back to user
-            res.cookie("token", token);
+            res.cookie("token", token, { exp: new Date(Date.now()) + 8 * 3600000 });
             res.send("Login Successful!!!")
         } else {
             throw new Error("Invalid Credentials");
@@ -72,25 +73,9 @@ app.post("/login", async (req, res) => {
 
 
 
-app.get("/profile", async (req, res) => {
+app.get("/profile", userAuth, async (req, res) => {
     try {
-
-        const cookies = req.cookies;
-        const { token } = cookies
-
-        if (!token) {
-            throw new Error("Invalid Token");
-        }
-
-        const decodedMessage = await jwt.verify(token, "RAHUL@123")
-        const { _id } = decodedMessage;
-
-        const userObject = await User.findById(_id);
-
-        if (!userObject) {
-            throw new Error("User does not exist");
-        }
-
+        const userObject = req.user
         res.send(userObject)
     }
     catch (err) {
