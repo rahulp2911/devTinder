@@ -56,3 +56,19 @@
      token : "sdfsfsfsfaa"
 
 ===========================================
+
+7)  /request/review/:status/:requestId             (status => accepted / rejected   )
+    localhost:7777/request/review/accepted/69f45b19510a632b15dfdfd0
+
+  request cookies : 
+     token : "sdfsfsfsfaa"
+
+===================================================
+
+8)  /user/requests/received
+
+request cookies : 
+     token : "sdfsfsfsfaa"
+
+========================================================
+
