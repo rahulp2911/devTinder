@@ -72,3 +72,9 @@ request cookies :
 
 ========================================================
 
+9) localhost:7777/user/connections
+
+request cookies : 
+     token : "sdfsfsfsfaa"
+
+==================================================

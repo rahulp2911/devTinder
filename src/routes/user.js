@@ -27,4 +27,37 @@ userRouter.get("/user/requests/received", userAuth, async (req, res) => {
 
 
 
+
+// Get all the pending connection request fro the logged in user 
+userRouter.get("/user/connections", userAuth, async (req, res) => {
+    try {
+
+        const loggedInUser = req.user;
+
+        const connectioRequests = await ConnectionRequest.find({
+            $or: [
+                { toUserId: loggedInUser._id, status: "accepted" },
+                { fromUserId: loggedInUser._id, status: "accepted" },
+            ]
+        }).populate("fromUserId", ["firstName", "lastName", "photoUrl", "gender", "age", "skills", "about"])
+            .populate("toUserId", ["firstName", "lastName", "photoUrl", "gender", "age", "skills", "about"]);
+
+        const filterData = connectioRequests.map((row) => {
+            if (row.fromUserId._id.toString() === loggedInUser._id.toString()) {
+                return row.toUserId;
+            }
+            return row.fromUserId
+        });
+
+        res.json({ message: "Connection Request fetch successfully", data: filterData })
+
+    }
+    catch (err) {
+        res.status(400).send("ERROR: " + err.message);
+    }
+
+})
+
+
+
 module.exports = userRouter;
