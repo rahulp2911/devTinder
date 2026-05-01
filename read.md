@@ -39,7 +39,8 @@
 - logout api
 - profile edit api
 
-
+-  learn query ,
+-
 
 - question 
 - what is package.loack json ?   should put on git repo ? 
@@ -50,6 +51,8 @@
 
 - learn 
 - order of the routes matter a lot 
+-- learn query , index , compound indexes
+
 
 - route  --> // "/user?s"  // "/use*rs"
 <!-- app.get("/users", (req, res) => {

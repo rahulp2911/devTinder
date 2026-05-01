@@ -47,3 +47,12 @@
       }
 
 
+===========================================
+
+6) /request/send/:status/:toUserId          (status => interested / ignored   )
+   localhost:7777/request/send/interested/69ed344ff9b019b196965752
+
+   request cookies : 
+     token : "sdfsfsfsfaa"
+
+===========================================
