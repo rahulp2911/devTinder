@@ -6,10 +6,15 @@ const cookieParser = require('cookie-parser')
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcryptjs")
 const { userAuth } = require("./middlewares/auth")
+const cors = require('cors')
 
 
 app.use(express.json());
 app.use(cookieParser()) // add middleware also 
+app.use(cors({
+    origin: 'http://localhost:5173/', // frontend app URL
+      credentials: true
+}));
 
 const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profile");

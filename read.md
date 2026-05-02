@@ -50,7 +50,8 @@
 - skip = (page-1)*limit;
 
 
-
+- # corse
+- install "npm i cors"
 
 
 
