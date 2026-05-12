@@ -54,6 +54,15 @@
 - install "npm i cors"
 
 
+- # DOTENV
+- install "npm i dotenv"
+
+- # Cron
+- install "npm i node-cron"     // for scheduler
+- bee-queue 
+
+
+
 
 
 - question 

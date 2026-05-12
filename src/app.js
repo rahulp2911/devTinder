@@ -8,6 +8,7 @@ const bcrypt = require("bcryptjs")
 const { userAuth } = require("./middlewares/auth")
 const cors = require('cors')
 
+require("./utils/cronjob")
 
 app.use(express.json());
 app.use(cookieParser()) // add middleware also 
